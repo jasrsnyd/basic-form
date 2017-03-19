@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form</title>
+    <link rel="stylesheet" href="css/simple.grid.min.css"></link>
+    <link rel="stylesheet" href="css/main.css"></link>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <div class="title row">
+                <div class="col-12">
+                    <h1> Jasmine's Basic Form </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div id="banner" class="col-12">
+                </div>
+            </div>
+            <form id="basic-form" class="form">
+                <div id="name-input" class="input row">
+                    <div class="col-6">
+                        <label for="firstname"> First name </label>
+                        <input id="firstname" class="name" type="text" placeholder="First name" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="lastname"> Last name </label>
+                        <input id="lastname" class="name" type="text" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div id="info-input" class="input row">
+                    <div class="col-6">
+                        <div id="birthday-label"> Date of Birth </div>
+                        <div id="birthday">
+                            <span class="month">
+                            Month
+                            <select id="month" onchange="getBirthdate()" required>
+                                <option value="">select</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </span>
+                            <span class="day">
+                            Day
+                            <select id="day">
+                            <option value="">select</option>
+                        </select>
+                        </span>
+                            <span class="year">
+                            Year
+                            <select id="year" onchange="getBirthdate()">
+                            <option value="">select</option>
+                            </select>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="phoneNumber"> Phone number </label>
+                        <input id="phoneNumber" class="telNumber" type="number" onchange="validate_pnum()" required>
+                    </div>
+                </div>
+                <div id="email-input" class="input row">
+                    <div class="col-12">
+                        <label for="email"> Email </label>
+                        <input id="email" type="text" name="email" placeholder="Email" onchange="validate_email()" required>
+                    </div>
+                </div>
+                <div id="comments-input" class="input row">
+                    <div class="col-12">
+                        <label for="comments"> Comments </label>
+                        <textarea name="comments" form="basic-form" placeholder="Comment here..."></textarea>
+                    </div>
+                </div>
+                <div class=" input row">
+                    <div class="col-12">
+                        <input id="cbox" type="checkbox" required>Check this box to confirm that my form is awesome!</input>
+                    </div>
+                </div>
+                <div class=" input row">
+                    <div class="col-12">
+                        <input id="subButton" type="button" value="Submit" onclick="onSubmit()">
+                    </div>
+                </div>
+    </div>
+    </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2017</p>
+    </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
